@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap");
+
+:root {
+  --yellow: #f4d04e;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+
+  /* Mobile-first typography (smaller sizes by default) */
+  --font-size-lg: 20px;
+  --font-size-md: 14px;
+  --font-size-sm: 12px;
+}
+
+@media (min-width: 768px) {
+  /* Tablets & up */
+  :root {
+    --font-size-lg: 24px;
+    --font-size-md: 16px;
+    --font-size-sm: 14px;
+  }
+}
+/* Reset default margins, paddings, and box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure elements inherit font styles */
+body,
+input,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+
+body {
+  background-color: var(--yellow);
+  font-family: "Figtree", sans-serif;
+  color: var(--gray-950);
+  line-height: 150%;
+  letter-spacing: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 24px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  h1 {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    line-height: 150%;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--yellow)
+    }
+  }
+
+  .tag {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    background-color: var(--yellow);
+    width: fit-content;
+    padding: 4px 16px;
+    border-radius: 4px;
+    line-height: 150%;
+    border: none;
+  }
+
+  .date {
+    font-size: var(--font-size-sm);
+    line-height: 150%;
+  }
+
+  .description {
+    color: var(--gray-500);
+    font-size: var(--font-size-md);
+    line-height: 150%;
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px #000;
+  max-width: 384px;
+}
+
+#note-img {
+  width: 100%;
+  height: 200px;
+  background-image: url("../assets/images/illustration-article.svg");
+  border-radius: 10px;
+}
+
+#avatar-img {
+  width: 32px;
+  height: 32px;
+  background-image: url("../assets/images/image-avatar.webp");
+}
+
+.image-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
