@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap");
+
 :root {
   --yellow: #f4d04e;
   --gray-950: #111111;
   --gray-500: #6b6b6b;
+
   /* Mobile-first typography (smaller sizes by default) */
   --font-size-lg: 20px;
   --font-size-md: 14px;
@@ -34,6 +36,7 @@ button {
   color: inherit;
 }
 
+
 body {
   background-color: var(--yellow);
   font-family: "Figtree", sans-serif;
@@ -51,34 +54,39 @@ article {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-article h1 {
-  font-size: var(--font-size-lg);
-  font-weight: bold;
-  line-height: 150%;
-}
-article h1:hover {
-  cursor: pointer;
-  color: var(--yellow);
-}
-article .tag {
-  font-size: var(--font-size-sm);
-  font-weight: bold;
-  background-color: var(--yellow);
-  width: fit-content;
-  padding: 4px 16px;
-  border-radius: 4px;
-  line-height: 150%;
-  border: none;
-}
-article .date {
-  font-size: var(--font-size-sm);
-  line-height: 150%;
-}
-article .description {
-  color: var(--gray-500);
-  font-size: var(--font-size-md);
-  line-height: 150%;
+
+  h1 {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    line-height: 150%;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--yellow)
+    }
+  }
+
+  .tag {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    background-color: var(--yellow);
+    width: fit-content;
+    padding: 4px 16px;
+    border-radius: 4px;
+    line-height: 150%;
+    border: none;
+  }
+
+  .date {
+    font-size: var(--font-size-sm);
+    line-height: 150%;
+  }
+
+  .description {
+    color: var(--gray-500);
+    font-size: var(--font-size-md);
+    line-height: 150%;
+  }
 }
 
 .author {
@@ -128,5 +136,3 @@ footer {
   padding: 10px;
   width: 100%;
 }
-
-/*# sourceMappingURL=styles.css.map */
