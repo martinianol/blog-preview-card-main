@@ -1,27 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap");
-:root {
-  --yellow: #f4d04e;
-  --gray-950: #111111;
-  --gray-500: #6b6b6b;
-  /* Mobile-first typography (smaller sizes by default) */
-  --font-size-lg: 20px;
-  --font-size-md: 14px;
-  --font-size-sm: 12px;
-}
-
-@media (min-width: 768px) {
-  /* Tablets & up */
-  :root {
-    --font-size-lg: 24px;
-    --font-size-md: 16px;
-    --font-size-sm: 14px;
-  }
-}
 /* Reset default margins, paddings, and box model */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --yellow: #f4d04e;
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+  /* Mobile-first typography (smaller sizes by default) */
+  --font-size-lg: clamp(20px, 5vw, 24px);
+  --font-size-md: clamp(14px, 3vw, 16px);
+  --font-size-sm: clamp(12px, 2vw, 14px);
 }
 
 /* Ensure elements inherit font styles */
